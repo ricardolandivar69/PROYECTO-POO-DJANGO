@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Insertados</title>
+</head>
+<body>
+    <h1>Información Insertada</h1>
+
+    <h2>Marcas</h2>
+    <ul>
+        {% for marca in marcas %}
+            <li>{{ marca.nombre }} - {{ marca.descripcion }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Productos</h2>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - {{ producto.descripcion }} - ${{ producto.precio_unitario }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Clientes</h2>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }} - {{ cliente.direccion }} - {{ cliente.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Ventas</h2>
+    <ul>
+        {% for venta in ventas %}
+            <li>{{ venta.numero }} - {{ venta.total }} - {{ venta.cliente.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Detalles de Ventas</h2>
+    <ul>
+        {% for detalle in detalles_ventas %}
+            <li>{{ detalle.venta.numero }} - {{ detalle.producto.nombre }} - Cantidad: {{ detalle.cantidad }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
