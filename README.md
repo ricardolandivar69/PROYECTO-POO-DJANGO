@@ -32,11 +32,14 @@ Este archivo te guiará a través de los pasos necesarios para levantar un proye
     ```bash
     pip install -r requirements.txt
 
-5. **Ejecuta las migraciones**
+5. **Ir a la carpeta `facturacion`**
+    ```bash
+    cd facturacion
+6. **Ejecuta las migraciones**
     - Asegúrate de que la base de datos esté sincronizada ejecutando:
         ```bash
         python manage.py migrate
-6. **Inicia el servidor de desarrollo**
+7. **Inicia el servidor de desarrollo**
     - Finalmente, levanta el servidor de Django:
         ```bash
         python manage.py runserver
